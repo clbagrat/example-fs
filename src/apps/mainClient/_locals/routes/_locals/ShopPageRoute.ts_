@@ -1,0 +1,12 @@
+import {Shop} from 'domains/access/Shop';
+import {useAuthorized} from 'domains/auth/useAuthorized';
+import {AuthForm} from 'domains/auth/AuthForm/AuthForm';
+
+
+export const ShopPage = () => {
+  const isAuthorized = useAuthorized();
+
+  if (isAuthorized) return <Shop />;
+
+  return <AuthForm />
+}

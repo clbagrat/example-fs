@@ -1,0 +1,15 @@
+import { ArticleTableOfContent } from './_locals/ArticleTableOfContent';
+import { ArticleQuery } from './_locals/article.query;
+import { SidebarLayout } from 'domains/layout/SidebarLayout';
+
+
+export const FullArticle = ({eid}) => {
+  const [loading, data] = useQuery(eid)
+  
+  return (
+    <SidebarLayout loading sidebarComponent = {() => <ArticleTableOfContent eid={eid}/ >}>
+      <Article eid={eid} />
+    </SidebarLayout>
+  )
+
+}

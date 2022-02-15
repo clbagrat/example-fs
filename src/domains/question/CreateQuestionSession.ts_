@@ -1,0 +1,19 @@
+import {Slider, Checkbox, WhatEver, LoadingOverlay} from '@amboss/design-system';
+import {useCreateQuestionSession} from './_locals/useCreateQuestionSession.mutation';
+
+export const CreateQuestionSession = ({themeIds}) => {
+  cosnt [create, loading] = useCreateQuestionSession(themeIds)
+
+  return (
+    <>
+      {loading && <LoadingOverlay />}
+      <Form>
+        {themeIds.map(themeId => <Checkbox value={themeId} />)}
+        <Slider />
+        <Submit />
+      </Form>
+
+    </>
+
+  );
+}

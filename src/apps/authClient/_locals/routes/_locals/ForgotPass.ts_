@@ -1,0 +1,14 @@
+import { ForgotPass } from 'domains/auth/ForgotPass';
+import { CenterEmphasizeLayout } from '@amboss/design-system'
+import { Page } from 'domain/shared/Page';
+
+
+export const LogInRoute = () => {
+  return (
+    <Page title="login" meta="all you need">
+      <CenterEmphasizeLayout>
+        <ForgotPass onSuccess={} />
+      </CenterEmphasizeLayout>
+    </Page>
+  );
+};

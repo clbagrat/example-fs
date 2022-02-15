@@ -1,0 +1,17 @@
+import { Modal } from 'domains/app-shell/Modal';
+import { SplitView } from 'domain/app-shell/splitView';
+import { Article } from 'domain/article/Article';
+import { query } from './_locals/questionSession.query';
+
+
+const QuestionSession = ({quizId}) => {
+  const [loading, data] = useQuery(query);
+
+  return (
+    <div>
+      <SplitView
+        left={() => <QuestionQuiz quizId={quizId}/>}
+        right={() => <Article eid}
+    </div>
+  )
+}

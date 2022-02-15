@@ -1,0 +1,10 @@
+export const Page = ({title, meta, children}) => {
+
+  return (
+    <Helmet>
+      <title>{title}</title>
+      <meta>{meta}</meta>
+    </Helmet>
+    {children}
+  )
+}

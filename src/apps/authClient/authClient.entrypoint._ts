@@ -1,0 +1,9 @@
+import React from 'react';
+import { render } from 'react-dom';
+import { Routes } from './_locals/routes/routes';
+
+render(
+    <DependencyProvider dependecies={dependecies}>
+        <Routes />
+    </DependencyProvider>
+, document.querySelector('app'))

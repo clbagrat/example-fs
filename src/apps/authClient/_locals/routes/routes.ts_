@@ -1,0 +1,13 @@
+import {LogIn} from './_locals/LogInRoute';
+import {ForgotPass} from './_locals/ForgotPassRoute';
+
+export const Routes = () => {
+  <Switch>
+    <Route path="/login">
+      <LogIn />
+    </Route>
+    <Route path="/forgot">
+      <ForgotPass />
+    </Route>
+  </Switch>
+}
