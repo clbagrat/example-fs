@@ -1,17 +1,19 @@
-import { Modal } from 'domains/app-shell/Modal';
-import { SplitView } from 'domain/app-shell/splitView';
-import { Article } from 'domain/article/Article';
-import { query } from './_locals/questionSession.query';
+import { SplitView } from 'domains/appShell/SplitView';
+import { Article } from 'domains/article/Article';
+import { LabValues } from './_locals/LabValues';
+import { Question } from './_locals/Question/Question';
 
 
-const QuestionSession = ({quizId}) => {
-  const [loading, data] = useQuery(query);
+export const QuestionSession = () => {
+  const getSecondaryView = () => {
+    // complex descision
+    return <Article eid={articleEid} />
+  }
 
-  return (
-    <div>
-      <SplitView
-        left={() => <QuestionQuiz quizId={quizId}/>}
-        right={() => <Article eid}
-    </div>
+  return  (
+    <SplitView secondaryView={getSecondaryView()}>
+      <Question />
+    </SplitView>
   )
+
 }

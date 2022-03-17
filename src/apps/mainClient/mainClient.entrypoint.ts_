@@ -1,0 +1,28 @@
+import React from 'react';
+import { render } from 'react-dom';
+import { Router, Route } from 'react-router';
+import { dependencies } from './_locals/dependencies/dependencies';
+import { AppShell } from 'domains/appShell/AppShell';
+import { DependencyProvider } from 'domains/shared/DependencyProvider';
+import { QuestionSessionPage } from './pages/QuestionSessionPage';
+import { QbankPage } from './pages/QbankPage';
+
+// place for performance measurments
+//
+render(
+  <DependencyProvider dependencies={dependencies}>
+    <Router>
+      <Route path={'/question-session/:sessionId/:questionIndex'}>
+        <AppShell>
+          <QuestionSessionPage />
+        </AppShell>
+      </Route>
+      <Route path={'/custom-question-session'}>
+        <AppShell>
+          <QbankPage />
+        </AppShell>
+      </Route>
+    </Router>
+  </DependencyProvider>
+
+, document.querySelector('app'))

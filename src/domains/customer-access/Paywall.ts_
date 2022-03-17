@@ -1,4 +1,0 @@
-export const Paywall = () => {
-  return <div> pay me </div>
-}
-

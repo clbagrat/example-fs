@@ -1,0 +1,19 @@
+import { Stack, Inline, Button } from '@amboss/design-system';
+import { TextZoomControll } from 'domains/uiComponents/TextZoomControll';
+import { FeedbackButton } from 'domains/feedback/FeedbackButton';
+import { AttendingTip } from './AttendingTip';
+
+export const QuestionContaner = () => {
+  <Stack>
+    <Inline>
+      <TextZoomControll />
+    </Inline>
+    {children}
+    <Inline>
+      <Button />
+      <Button />
+      <Button />
+      <FeedbackButton />
+    </Inline>
+  </Stack>
+}

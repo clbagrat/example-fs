@@ -1,0 +1,18 @@
+import { Stack } from '@amboss/design-system';
+
+import { QuestionContainer } from './_locals/QuestionContainer';
+import { AnswerList } from './_locals/AnswerList';
+import { QuestionText } from './_locals/QuestionText';
+import { QuestionFooter } from './_locals/QuestionFooter';
+
+export const Question = () => {
+  return (
+    <Stack>
+      <QuestionContainer>
+        <QuestionText />
+      </QuestionContainer>
+      <AnswerList />
+      <QuestionFooter />
+    </Stack>
+  )
+}

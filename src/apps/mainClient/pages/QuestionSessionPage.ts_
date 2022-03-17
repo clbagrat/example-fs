@@ -1,0 +1,10 @@
+import { AppShell } from 'domains/appShell/AppShell';
+import { QuestionSession } from 'domains/question/QuestionSession';
+
+export const QuestionSessionPage = ({routeProps}) => {
+  return (
+    <AppShell>
+      <QuestionSession sessionId={routeProps.sessionId} questionIndex={routeProps.questionIndex} />
+    </AppShell>
+  );
+}

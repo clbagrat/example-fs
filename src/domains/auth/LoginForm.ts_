@@ -1,5 +1,0 @@
-import {query} from '../article/_locals/article.query'; // error from linter
-
-import {query} from './_locals/auth.query'; // nice
-
-import {component} from './_locals/asdasd/_locals' // error

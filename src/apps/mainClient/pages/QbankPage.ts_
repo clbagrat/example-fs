@@ -1,0 +1,24 @@
+import { AppShell } from 'domains/appShell/AppShell';
+import { QuestionSession } from 'domains/question/QuestionSession';
+import { AnchorCard } from '@amboss/design-system';
+import { RecentQuestionSessionList } from 'domains/question/RecentQuestionSessionList';
+import { useCurrentUser } from 'domains/user/useCurrentUser';
+
+export const QuestionSessionPage = ({routeProps}) => {
+  const { data: { isDoctor } } = useCurrentUser();
+
+  return (
+    <AppShell>
+      <H1>Qbank</H1>
+
+      <Stack>
+        <Inline>
+          <AnchorCard image={qbank} to={'/qbank/create'} title text />
+          {!isDoctor && (<AnchorCard image={tutor} to={'/tutor/start'} title text />)}
+        </Inline>
+
+        <RecentQuestionSessionList />
+      </Stack>
+    </AppShell>
+  );
+}

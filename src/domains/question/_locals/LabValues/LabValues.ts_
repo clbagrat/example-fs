@@ -1,0 +1,9 @@
+import { Tabs, Input } from '@amboss/design-system';
+
+
+export LabValues = () => {
+  return (
+    <Tabs>
+    </Tabs>
+  )
+}

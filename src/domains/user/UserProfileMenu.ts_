@@ -1,9 +1,0 @@
-import { Avatar } from './_locals/Avatar';
-import { DropdownMenu } from '@amboss/design-system';
-
-
-export const UserProfileMenu = () => {
-  <DropdownMenu>
-    <Avatar />
-  </DropdownMenu>
-}

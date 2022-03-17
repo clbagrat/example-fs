@@ -1,0 +1,7 @@
+export recentQuestionSessions = gql`
+  here is my query;
+`
+
+export questonSessionPerformance = gql`
+ asdasd
+`;

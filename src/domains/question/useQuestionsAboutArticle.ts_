@@ -1,6 +1,0 @@
-import { correctQuery } from './_locals/questionSession.query';
-
-
-export const useQueestionAboutArticle = () => {
-  return useQuery(correctQuery);
-}
